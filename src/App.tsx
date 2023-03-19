@@ -1,25 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router';
+import CreateNewGame from './components/CreateNewGame/CreateNewGame';
+import GameTable from './components/GameTable/GameTable';
+import JoinGame from './components/JoinGame/JoinGame';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+        <Route path="/" element={<CreateNewGame />} />
+        <Route path="/game/:gameId" element={<GameTable />} />
+        <Route path="/game/:gameId/join" element={<JoinGame />} />
+      </Routes>
   );
 }
 
