@@ -1,0 +1,9 @@
+html {
+    height: 100vh;
+}
+body{
+    margin: 0px;
+    overflow: hidden;
+    background: linear-gradient(#031017, #1c2d40);
+    font-family: 'Montserrat';
+}
